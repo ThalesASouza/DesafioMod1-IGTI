@@ -1,0 +1,176 @@
+
+#header-pesquisa{
+  padding: 10px;
+  background-color: #26a799;
+  color: white;
+}
+#header-pesquisa h2{
+  text-align: center;
+}
+#div-input{
+    width: 93.5%;
+    display: inline-block;
+    border-radius: 20px 0px 0px 20px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #b61d1f;
+    overflow: hidden;
+}
+#div-input input{
+    background-color: white;
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 20px;
+    border: 0px;
+}
+
+#content{
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  padding: 10px;
+
+}
+#load{
+  position: absolute;
+  left:45%;
+  right: 45%;
+  width: 20%;
+}
+#load img{
+  width: 55%;
+}
+#load h4{
+  text-align: center;
+}
+
+#tabStatistc{
+  border: 1px solid gray;
+  width: 49%;
+  margin-right: 5px;
+  margin-left: 10px;
+  
+}
+.tabStatistcContent{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    background-color:rgba(139, 0, 0, 0.9);
+    color: white;
+}
+.contentStatis {
+    padding: 20px;
+}
+.intemContentSta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+}
+.intemContentSta div{
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.barraG:load{
+    transition: width 2s;
+}
+.barraG{
+    background-color: green;
+    padding: 10px;
+    color: white;
+    display: inline-table;
+}
+.barraB{
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    display: inline-table;
+}
+.barraS{
+    padding: 10px;
+}
+.barraM{
+    padding: 10px;
+}
+#tabUsers{
+    border: 1px solid gray;
+    width: 49%;
+    margin-left: 5px;
+}
+.tabUsersContent{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 15px;
+    background-color:rgba(139, 0, 0, 0.9);
+    color: white;
+}
+#tabUser{
+    max-height: 350px;
+    overflow: overlay;
+}
+#countResult {
+    font-size: 45px;
+    margin-right: 10px;
+}
+.contentUsers{
+    padding: 10px 20px 0px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contentUsers:hover{
+    background-color: #808080;
+    color: white;
+}
+.foto{
+    margin-left: 5px;
+}
+.foto img{
+  border-radius: 50%;
+  width: 60px;
+}
+.idade{
+  font-size: 18px;
+  margin-left: 5px;
+}
+.nome{
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.disabled{
+  display: none;
+}
+.enable{
+  display: inline-table;
+}
+
+#div-btn{
+  display: inline;
+}
+
+.button{
+    display: inline-block;
+    position: absolute;
+    border-radius: 0px 20px 20px 0px;
+    background-color:darkred;
+    padding: 15px 16px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase
+}
+
+.button:hover{
+  background-color:#b61d1f;
+}
+.button:click{
+   background-color:#b61d1f;
+}
+.button:focus{
+  background-color:#b61d1f;
+}
+.button:disabled{
+  background-color: grey;
+}
