@@ -42,9 +42,9 @@ async function fetchUsers(){
   const interval = setInterval(() => {
   allUsers = json.results.map(user =>{
     const {dob,gender,name,picture} = user;
-    
+    const nome = `${name.first} ${name.last}`;
     return{
-      Nome:name.first+" "+name.last,
+      Nome:nome.toLowerCase(),
       idade: dob.age,
       sexo: gender,
       foto:picture.thumbnail
@@ -88,18 +88,11 @@ function buttonSearch(event){
 
 function filtrar(event){
   
-  let dado = [event.target.value.substr(0, event.target.value.length)];
-  let usersFilter= [];
-  let cont =0;
-  
-  allUsers.forEach(user =>{
-    if(user.Nome.toLowerCase().indexOf(dado[0].toLowerCase())>=0){
-      usersFilter[cont] = user;
-      cont++;
-      
-    }  
+  const dado = event.target.value;
+  const usersFilter = allUsers.filter((user) =>{
+    return user.Nome.includes(dado.toLowerCase());
   });
-  
+
   usersFilter.sort((a, b) => {
     return a.Nome.localeCompare(b.Nome);
   });
@@ -168,19 +161,20 @@ function renderStatistic(usersFilter){
         <div class="barraB" style="width:${percentGenderF}%;">${Math.round(percentGenderF)}%</div>
         <div>${genderF.length}</div>
       </div>
-       <div class="intemContentSta">
+      <div class="intemContentSta">
         <div><i class="fa fa-birthday-cake" aria-hidden="true"></i></div>
         <div class="barraS" width="${somaIdade}%">Soma Idades</div>
         <div>${somaIdade}</div>
       </div>
-       <div class="intemContentSta">
+      <div class="intemContentSta">
         <div><i class="fa fa-calculator" aria-hidden="true"></i></div>
         <div class="barraM" width="${mediaIdade}%">Média Idades</div>
         <div>${Math.round(mediaIdade)} Anos</div>
       </div>
     </div>
     `;
-
+  
+  
   let h3 = document.querySelector('#sta');
   h3.textContent = 'Estatísticas';
   divTabStatisc.innerHTML = tabStatisticHTML;

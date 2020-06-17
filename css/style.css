@@ -71,14 +71,13 @@
     margin-left: 15px;
     margin-bottom: 15px;
 }
-.barraG:load{
-    transition: width 2s;
-}
+
 .barraG{
     background-color: green;
     padding: 10px;
     color: white;
     display: inline-table;
+  
 }
 .barraB{
     background-color: blue;
